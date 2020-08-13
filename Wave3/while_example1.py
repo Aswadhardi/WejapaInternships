@@ -12,12 +12,9 @@ count_by = 2  # provide some number to count by
 
 # write a while loop that uses break_num as the ongoing number to
 #   check against end_num
-break_num = count_by
-while start_num < end_num:
-    break_num += 1
+break_num = start_num
 
-    if break_num == end_num+1:
-        count_by += end_num
-        break
+while break_num + count_by < end_num:
+    break_num += count_by
 
 print(break_num)
